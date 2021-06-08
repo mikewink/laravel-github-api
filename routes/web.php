@@ -1,5 +1,6 @@
 <?php
 
+use GrahamCampbell\GitHub\Facades\GitHub;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+
+    dd(GitHub::user()->show('mikewink'));
+    dd(GitHub::me()->repositories('owner', 'id', 'desc'));
+    dd(GitHub::user()->repositories('mikewink'));
+    dd(GitHub::current_user());
+    dd(GitHub::gists()->all());
+
+    //return GitHub::repo()->show('mikewink', 'laravel-github-api');
+
+    //return view('welcome');
 });

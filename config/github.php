@@ -42,11 +42,11 @@ return [
 
         'main' => [
             'method'     => 'token',
-            'token'      => 'your-token',
-            // 'backoff'    => false,
-            // 'cache'      => false,
-            // 'version'    => 'v3',
-            // 'enterprise' => false,
+            'token'      => env('GITHUB_TOKEN'),
+            //'backoff'    => false,
+            //'cache'      => false,
+            //'version'    => 'v3',
+            //'enterprise' => false,
         ],
 
         'app' => [

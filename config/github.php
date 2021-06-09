@@ -44,8 +44,8 @@ return [
             'method'     => 'token',
             'token'      => env('GITHUB_TOKEN'),
             //'backoff'    => false,
-            //'cache'      => false,
-            //'version'    => 'v3',
+            'cache'      => true,
+            'version'    => 'v3',
             //'enterprise' => false,
         ],
 
@@ -106,8 +106,8 @@ return [
         'main' => [
             'driver'    => 'illuminate',
             'connector' => null, // null means use default driver
-            // 'min'       => 43200,
-            // 'max'       => 172800
+            'min'       => 43200,
+            'max'       => 172800
         ],
 
         'bar' => [

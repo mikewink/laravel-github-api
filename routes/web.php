@@ -16,13 +16,20 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
+    //ray(GitHub::rate_limit()->getResource('core')->getRemaining());
+    //ray(GitHub::user()->show('mikewink'));
+    //ray(GitHub::user()->repositories('mikewink'));
+
+    /*
+    dd(GitHub::rate_limit()->getResource('core')->getRemaining());
     dd(GitHub::user()->show('mikewink'));
     dd(GitHub::me()->repositories('owner', 'id', 'desc'));
     dd(GitHub::user()->repositories('mikewink'));
     dd(GitHub::current_user());
     dd(GitHub::gists()->all());
+    */
 
     //return GitHub::repo()->show('mikewink', 'laravel-github-api');
 
-    //return view('welcome');
+    return view('welcome');
 });
